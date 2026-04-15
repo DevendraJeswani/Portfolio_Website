@@ -10,13 +10,13 @@ import placeholder6 from "@/assets/placeholder-6.jpg";
 
 const timelineData = [
   { num: "01", year: "2005–2020", title: "Primary Education", desc: "Completed my primary education in Sacred Heart School, Rayagada. Happy part of life", image: "/sacred-heart.png", side: "left" },
-  { num: "02", year: "Till 2022", title: "higher education", desc: "Chose field of science and decided to prepare for JEE online with St. Xavier's High school", image: "/st-xaviers.jpg", side: "right" },
-  { num: "03", year: "2022–2023", title: "the kota grind", desc: "A pivotal year of intense focus, resilience, and discipline. The defining transition into engineering.", image: "/allen-kota.png", side: "left" },
-  { num: "04", year: "2023", title: "joined IIT Kharagpur", desc: "Cleared JEE and stepped into the historic campus of IIT KGP. Achieved a dream", image: "/iit-kgp-campus.png", side: "right" },
-  { num: "05", year: "2023–2025", title: "exploration", desc: "exploration worked in Socities, cell and organzied various events", image: "/e-cell.png", side: "left" },
-  { num: "06", year: "Summer 2025", title: "first step", desc: "Finally got the 1st internship after a lot of effort", image: "/livguard-timeline.png", side: "right" },
-  { num: "07", year: "2025–2026", title: "the hustle", desc: "Completed various projects, competitions and remote internships to learn", image: "/hustle-checklist.png", side: "left" },
-  { num: "08", year: "2026+", title: "future focus", desc: "Looking forward to new learnings, leading products, and defining the digital future.", image: "/future-focus-vision.png", side: "right" },
+  { num: "02", year: "Till 2022", title: "Higher Education", desc: "Chose field of science and decided to prepare for JEE online with St. Xavier's High school", image: "/st-xaviers.jpg", side: "right" },
+  { num: "03", year: "2022–2023", title: "The Kota Grind", desc: "A pivotal year of intense focus, resilience, and discipline. The defining transition into engineering.", image: "/allen-kota.png", side: "left" },
+  { num: "04", year: "2023", title: "Joined IIT Kharagpur", desc: "Cleared JEE and stepped into the historic campus of IIT KGP. Achieved a dream", image: "/iit-kgp-campus.png", side: "right" },
+  { num: "05", year: "2023–2025", title: "Exploration", desc: "exploration worked in Socities, cell and organzied various events", image: "/e-cell.png", side: "left" },
+  { num: "06", year: "Summer 2025", title: "First Step", desc: "Finally got the 1st internship after a lot of effort", image: "/livguard-timeline.png", side: "right" },
+  { num: "07", year: "2025–2026", title: "The Hustle", desc: "Completed various projects, competitions and remote internships to learn", image: "/hustle-checklist.png", side: "left" },
+  { num: "08", year: "2026+", title: "Future Focus", desc: "Looking forward to new learnings, leading products, and defining the digital future.", image: "/future-focus-vision.png", side: "right" },
 ];
 
 const Home = () => {
