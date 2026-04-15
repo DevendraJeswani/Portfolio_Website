@@ -50,7 +50,7 @@ const Work = () => {
               imageClassName="object-contain p-6"
             />
             <HoverCard
-              image="/livguard.png"
+              image="/livguard-v2.png"
               title="Livguard"
               subtitle="Strategy Intern"
               className="aspect-square bg-white"
