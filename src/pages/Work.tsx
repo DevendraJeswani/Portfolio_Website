@@ -115,7 +115,7 @@ const Work = () => {
               imageClassName="object-contain p-6"
             />
             <HoverCard
-              image="/green-industry.png"
+              image="/green-industry-v2.png"
               title="Report"
               subtitle="Green Industry Report"
               tag="Self Project"
