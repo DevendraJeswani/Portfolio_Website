@@ -38,7 +38,7 @@ const Work = () => {
             <HoverCard
               image="/wspl.png"
               title="WSPL"
-              subtitle="Product Management"
+              subtitle="Product Management Intern"
               className="aspect-square bg-white"
               imageClassName="object-contain p-6"
             />
