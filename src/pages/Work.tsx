@@ -75,7 +75,8 @@ const Work = () => {
             <HoverCard
               image="/iim-rohtak.png"
               title="IIM Ranchi"
-              subtitle="Ignitus-7.0&#10;Top 4"
+              subtitle={`Ignitus-7.0
+Top 4`}
               tag="competition"
               className="flex-shrink-0 w-[calc(50%-0.5rem)] md:w-[calc(25%-0.75rem)] lg:w-[calc(20%-0.8rem)] aspect-square bg-white snap-center"
               imageClassName="object-contain p-6"
@@ -83,7 +84,8 @@ const Work = () => {
             <HoverCard
               image="/iit-dhanbad.png"
               title="IIT Dhanbad"
-              subtitle="Prodlblitz-3.0&#10;Top 5"
+              subtitle={`Prodlblitz-3.0
+Top 5`}
               tag="competition"
               className="flex-shrink-0 w-[calc(50%-0.5rem)] md:w-[calc(25%-0.75rem)] lg:w-[calc(20%-0.8rem)] aspect-square bg-white snap-center"
               imageClassName="object-contain p-6"
@@ -91,7 +93,8 @@ const Work = () => {
             <HoverCard
               image="/nsut.png"
               title="NSUTS"
-              subtitle="Netaji Subhas Business Case&#10;Finalist"
+              subtitle={`Netaji Subhas Business Case
+Finalist`}
               tag="competition"
               className="flex-shrink-0 w-[calc(50%-0.5rem)] md:w-[calc(25%-0.75rem)] lg:w-[calc(20%-0.8rem)] aspect-square bg-white snap-center"
               imageClassName="object-contain p-6"
