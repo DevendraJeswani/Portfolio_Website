@@ -9,14 +9,14 @@ import placeholder5 from "@/assets/placeholder-5.jpg";
 import placeholder6 from "@/assets/placeholder-6.jpg";
 
 const timelineData = [
-  { num: "01", year: "2005–2020", title: "completed high school", desc: "Foundation years, exploring interests and building the curiosity that defines her Kota.", image: placeholder1, side: "left" },
-  { num: "02", year: "Till 2022", title: "higher education", desc: "Narrowing focus and embracing complex challenges in science and technology.", image: placeholder2, side: "right" },
-  { num: "03", year: "2022–2023", title: "the kota grind", desc: "A pivotal year of intense focus, resilience, and discipline. The defining transition into engineering.", image: placeholder6, side: "left" },
-  { num: "04", year: "2023", title: "joined IIT Kharagpur", desc: "Cleared JEE and stepped into the historic campus of IIT KGP to pursue Geophysics.", image: placeholderCampus, side: "right" },
-  { num: "05", year: "2023–2025", title: "exploration", desc: "Active leadership in campus societies, event management, and building people-first products.", image: placeholder4, side: "left" },
-  { num: "06", year: "Summer 2025", title: "first step", desc: "Completed first professional internship, translating theory into real-world product solutions.", image: placeholder3, side: "right" },
-  { num: "07", year: "2025–2026", title: "the hustle", desc: "3rd year projects, product management competitions, and remote internships with global teams.", image: placeholder5, side: "left" },
-  { num: "08", year: "2026+", title: "future focus", desc: "Looking forward to new learnings, leading products, and defining the digital future.", image: placeholder5, side: "right" },
+  { num: "01", year: "2005–2020", title: "Primary Education", desc: "Completed my primary education in Sacred Heart School, Rayagada. Happy part of life", image: "/sacred-heart.png", side: "left" },
+  { num: "02", year: "Till 2022", title: "higher education", desc: "Chose field of science and decided to prepare for JEE online with St. Xavier's High school", image: "/st-xaviers.jpg", side: "right" },
+  { num: "03", year: "2022–2023", title: "the kota grind", desc: "A pivotal year of intense focus, resilience, and discipline. The defining transition into engineering.", image: "/allen-kota.png", side: "left" },
+  { num: "04", year: "2023", title: "joined IIT Kharagpur", desc: "Cleared JEE and stepped into the historic campus of IIT KGP. Achieved a dream", image: "/iit-kgp-campus.png", side: "right" },
+  { num: "05", year: "2023–2025", title: "exploration", desc: "exploration worked in Socities, cell and organzied various events", image: "/e-cell.png", side: "left" },
+  { num: "06", year: "Summer 2025", title: "first step", desc: "Finally got the 1st internship after a lot of effort", image: "/livguard-timeline.png", side: "right" },
+  { num: "07", year: "2025–2026", title: "the hustle", desc: "Completed various projects, competitions and remote internships to learn", image: "/hustle-checklist.png", side: "left" },
+  { num: "08", year: "2026+", title: "future focus", desc: "Looking forward to new learnings, leading products, and defining the digital future.", image: "/future-focus-vision.png", side: "right" },
 ];
 
 const Home = () => {
@@ -50,7 +50,7 @@ const Home = () => {
                 view journey
               </a>
               <a
-                href="/work"
+                href="#work"
                 className="text-sm text-muted-foreground underline underline-offset-4 hover:text-foreground transition-colors"
               >
                 explore archive →
@@ -77,10 +77,17 @@ const Home = () => {
 
       {/* Journey Timeline */}
       <section id="journey" className="py-24 px-8 md:px-16 w-full relative z-0">
+        <ScrollReveal>
+          <div className="mb-16">
+            <h2 className="font-display text-5xl md:text-7xl font-bold text-foreground leading-tight">
+              My Timeline
+            </h2>
+          </div>
+        </ScrollReveal>
         {/* Shortened peach background rectangle with negative left to cover sidebar content */}
         <div className="absolute inset-y-0 left-[-14%] right-[10%] bg-[#ffece4] -z-10 transition-all duration-500 rounded-3xl" />
         
-        <div className="w-full pr-[15%] space-y-32 mt-12 block">
+        <div className="w-full pr-[15%] space-y-20 mt-12 block">
           {timelineData.map((item, i) => {
             const yearStr = item.year;
             let formattedYear: React.ReactNode = yearStr;
@@ -97,7 +104,11 @@ const Home = () => {
 
             return (
             <ScrollReveal key={item.num} delay={0.1}>
-              <div
+              <motion.div
+                initial={{ scale: 0.95, opacity: 0.7 }}
+                whileInView={{ scale: 1.03, opacity: 1 }}
+                viewport={{ amount: 0.5, once: false }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
                 className={`flex flex-col md:flex-row items-center gap-12 lg:gap-24 justify-center ${
                   item.side === "right" ? "md:flex-row-reverse" : ""
                 }`}
@@ -110,41 +121,43 @@ const Home = () => {
                 {/* Text Side (Mobile Year included) */}
                 <div className={`flex-1 flex flex-col ${item.side === "right" ? "md:items-end md:text-right" : "md:items-start md:text-left"}`}>
                   <span className="md:hidden text-4xl font-mono text-pink-400 opacity-60 mb-4 block tracking-tight">{formattedYear}</span>
-                  <h3 className="font-display text-3xl font-bold text-foreground mt-2">
+                  <motion.h3 
+                    className="font-display text-3xl font-bold text-foreground mt-2"
+                    whileInView={{ scale: 1.05 }}
+                    transition={{ duration: 0.4 }}
+                  >
                     {item.title}
-                  </h3>
-                  <p className="text-base text-muted-foreground mt-4 max-w-sm leading-relaxed">
+                  </motion.h3>
+                  <motion.p 
+                    className="text-base text-muted-foreground mt-4 max-w-sm leading-relaxed"
+                    whileInView={{ color: "var(--foreground)" }}
+                    transition={{ duration: 0.4 }}
+                  >
                     {item.desc}
-                  </p>
+                  </motion.p>
                 </div>
                 
                 {/* Image side */}
                 <div className="flex-1 w-full flex justify-center relative">
                   <motion.div
-                    className="w-full max-w-lg aspect-video rounded-xl overflow-hidden bg-card shadow-lg"
-                    whileHover={{ scale: 1.02 }}
+                    className="w-full max-w-xl rounded-2xl overflow-hidden bg-[#ffece4]/40 shadow-md border border-[#f5d5c5]/50"
+                    whileHover={{ scale: 1.05 }}
                     transition={{ duration: 0.3 }}
                   >
                     <img
                       src={item.image}
                       alt={item.title}
-                      className="w-full h-full object-cover"
+                      className="w-full h-auto block"
                       loading="lazy"
                     />
                   </motion.div>
                 </div>
-              </div>
+              </motion.div>
             </ScrollReveal>
           )})}
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-8 px-8 border-t border-border text-center">
-        <p className="text-xs text-muted-foreground">
-          © 2024 digital curator. all rights reserved.
-        </p>
-      </footer>
     </div>
   );
 };

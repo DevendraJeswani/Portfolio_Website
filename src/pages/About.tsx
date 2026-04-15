@@ -1,10 +1,14 @@
 import { motion } from "framer-motion";
 import ScrollReveal from "@/components/ScrollReveal";
 import devendraPhoto from "@/assets/devendra-photo.png";
+import { Mail, Linkedin, Github, Twitter } from "lucide-react";
 
 const About = () => {
   return (
-    <div className="min-h-screen py-16 px-8 md:px-16">
+    <div id="about" className="min-h-screen py-24 px-8 md:px-16 relative z-0">
+      {/* Shortened peach background rectangle with negative left to cover sidebar content */}
+      <div className="absolute inset-y-8 left-[-14%] right-0 bg-[#ffece4] -z-10 transition-all duration-500 rounded-3xl" />
+      
       {/* Hero */}
       <section className="min-h-[70vh] flex items-center">
         <div className="flex flex-col md:flex-row items-center gap-12 w-full">
@@ -68,21 +72,49 @@ const About = () => {
               <p className="text-sm text-muted-foreground">Sacred Heart School, Rayagada</p>
             </div>
             <div>
-              <h3 className="font-display text-sm font-bold uppercase tracking-wider text-foreground mb-4">Interests</h3>
-              <p className="text-sm text-muted-foreground">Product Management</p>
-              <p className="text-sm text-muted-foreground">User Experience Design</p>
-              <p className="text-sm text-muted-foreground">Data-Driven Decision Making</p>
-            </div>
-            <div>
-              <h3 className="font-display text-sm font-bold uppercase tracking-wider text-foreground mb-4">Currently</h3>
-              <p className="text-sm text-muted-foreground">Exploring PM roles</p>
-              <p className="text-sm text-muted-foreground">Building side projects</p>
-              <p className="text-sm text-muted-foreground">IIT KGP campus life</p>
+              <h3 className="font-display text-sm font-bold uppercase tracking-wider text-foreground mb-4">Skills</h3>
+              <p className="text-sm text-muted-foreground transition-all duration-300 hover:text-primary cursor-default">General Management</p>
+              <p className="text-sm text-muted-foreground transition-all duration-300 hover:text-primary cursor-default">Canva & Figma</p>
+              <p className="text-sm text-muted-foreground transition-all duration-300 hover:text-primary cursor-default">Python, SQL</p>
+              <p className="text-sm text-muted-foreground transition-all duration-300 hover:text-primary cursor-default">Notion</p>
+              <p className="text-sm text-muted-foreground transition-all duration-300 hover:text-primary cursor-default">Tableau & BI</p>
+            </div>            <div>
+              <h3 className="font-display text-sm font-bold uppercase tracking-wider text-foreground mb-4 italic">get in touch</h3>
+              <h4 className="font-display text-lg font-bold text-foreground mb-6 leading-tight">Let's build<br />something.</h4>
+              
+              <div className="space-y-4">
+                <a
+                  href="mailto:devendrajeswani55@gmail.com"
+                  className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors group text-sm"
+                >
+                  <Mail size={18} strokeWidth={1.5} />
+                  <span className="group-hover:underline underline-offset-4">Email</span>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/devendra-jeswani-b63388294/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors group text-sm"
+                >
+                  <Linkedin size={18} strokeWidth={1.5} />
+                  <span className="group-hover:underline underline-offset-4">LinkedIn</span>
+                </a>
+                <a
+                  href="https://github.com/DevendraJeswani/Portfolio_Website"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors group text-sm"
+                >
+                  <Github size={18} strokeWidth={1.5} />
+                  <span className="group-hover:underline underline-offset-4">GitHub</span>
+                </a>
+              </div>
             </div>
           </div>
         </section>
       </ScrollReveal>
     </div>
+
   );
 };
 

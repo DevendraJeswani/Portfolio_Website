@@ -5,7 +5,11 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
+  html {
+  scroll-behavior: smooth;
+}
+
+:root {
     --background: 40 20% 98%;
     --foreground: 0 0% 12%;
 
@@ -86,4 +90,13 @@ html {
   font-weight: 700;
   color: hsl(var(--primary));
   line-height: 0.85;
+}
+
+/* Hide scrollbar utility */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

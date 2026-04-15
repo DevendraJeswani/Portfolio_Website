@@ -8,14 +8,28 @@ interface HoverCardProps {
   children?: ReactNode;
   className?: string;
   imageClassName?: string;
+  tag?: string;
+  link?: string;
 }
 
-const HoverCard = ({ image, title, subtitle, className = "", imageClassName = "object-cover" }: HoverCardProps) => {
-  return (
-    <motion.div
-      className={`relative overflow-hidden rounded-lg cursor-pointer group ${className}`}
-      whileHover="hover"
-    >
+const HoverCard = ({ 
+  image, 
+  title, 
+  subtitle, 
+  className = "", 
+  imageClassName = "object-cover",
+  tag,
+  link
+}: HoverCardProps) => {
+  const CardContent = (
+    <>
+      {tag && (
+        <div className="absolute top-2 left-0 z-20">
+          <div className="bg-pink-500 text-white text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded-r-sm shadow-lg">
+            {tag}
+          </div>
+        </div>
+      )}
       <motion.img
         src={image}
         alt={title || ""}
@@ -28,7 +42,7 @@ const HoverCard = ({ image, title, subtitle, className = "", imageClassName = "o
       />
       {(title || subtitle) && (
         <motion.div
-          className="absolute inset-0 flex flex-col items-center justify-center bg-foreground/60 backdrop-blur-sm"
+          className="absolute inset-0 flex flex-col items-center justify-center bg-foreground/60 backdrop-blur-sm px-4 text-center"
           initial={{ opacity: 0 }}
           variants={{
             hover: { opacity: 1 },
@@ -36,12 +50,27 @@ const HoverCard = ({ image, title, subtitle, className = "", imageClassName = "o
           transition={{ duration: 0.3 }}
         >
           {title && (
-            <h3 className="font-display text-lg font-bold text-primary-foreground">{title}</h3>
+            <h3 className="font-display text-lg font-bold text-primary-foreground leading-tight">{title}</h3>
           )}
           {subtitle && (
-            <p className="text-sm text-primary-foreground/80 mt-1">{subtitle}</p>
+            <p className="text-sm text-primary-foreground/80 mt-1 whitespace-pre-line">{subtitle}</p>
           )}
         </motion.div>
+      )}
+    </>
+  );
+
+  return (
+    <motion.div
+      className={`relative overflow-hidden rounded-lg cursor-pointer group ${className}`}
+      whileHover="hover"
+    >
+      {link ? (
+        <a href={link} target="_blank" rel="noopener noreferrer" className="block w-full h-full">
+          {CardContent}
+        </a>
+      ) : (
+        CardContent
       )}
     </motion.div>
   );
