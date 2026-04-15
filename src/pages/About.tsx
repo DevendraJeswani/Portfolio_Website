@@ -92,7 +92,7 @@ const About = () => {
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors group text-sm"
                 >
-                  <Mail size={18} strokeWidth={1.5} />
+                  <Linkedin size={18} strokeWidth={1.5} />
                   <span className="group-hover:underline underline-offset-4">LinkedIn</span>
                 </a>
                 <a
@@ -101,7 +101,7 @@ const About = () => {
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors group text-sm"
                 >
-                  <Mail size={18} strokeWidth={1.5} />
+                  <Github size={18} strokeWidth={1.5} />
                   <span className="group-hover:underline underline-offset-4">GitHub</span>
                 </a>
               </div>
