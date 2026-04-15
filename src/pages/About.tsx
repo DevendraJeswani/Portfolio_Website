@@ -84,7 +84,7 @@ const About = () => {
                   className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors group text-sm"
                 >
                   <Mail size={18} strokeWidth={1.5} />
-                  <span className="group-hover:underline underline-offset-4">Email</span>
+                  <span className="group-hover:underline underline-offset-4">devendrajeswani55@gmail.com</span>
                 </a>
                 <a
                   href="https://www.linkedin.com/in/devendra-jeswani-b63388294/"
