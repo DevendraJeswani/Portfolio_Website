@@ -28,13 +28,16 @@ const About = () => {
             </h1>
             <div className="mt-6 space-y-4 text-muted-foreground text-sm leading-relaxed max-w-lg">
               <p>
-                Devendra Jeswani is a <span className="text-foreground font-medium">Geophysics student at IIT Kharagpur</span> & an aspiring Product Manager.
+                I am currently a pre-final year student at IIT Kharagpur. Coming from a business family and having seen it first-hand from a young age, I’ve naturally developed a strong inclination towards entrepreneurship.
               </p>
               <p>
-                With a passion for building people-first digital products, he combines analytical thinking from his engineering background with creative problem-solving and user empathy.
+                Over the course of my college life, I’ve explored some fields, eventually developing interest in Product and Data. I enjoy participating in competitions, solving real-world problems, and working with driven and kind people and and I particularly like getting things done. Currently, I’m focused on learning through internships, projects, and hands-on experiences.
               </p>
               <p>
-                From leading campus societies to working on real-world product solutions during internships, Devendra brings a unique blend of technical depth and strategic vision to everything he builds.
+                Trying to explore new things and meet new people.
+              </p>
+              <p>
+                Beyond work, I like exploring and travelling to new places (especially in a good mood), and I enjoy playing badminton and cricket (ain't good at this).
               </p>
             </div>
           </motion.div>
@@ -61,7 +64,7 @@ const About = () => {
       {/* Details */}
       <ScrollReveal>
         <section className="py-20 border-t border-border">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div>
               <h3 className="font-display text-sm font-bold uppercase tracking-wider text-foreground mb-4">Education</h3>
               <p className="text-sm text-foreground font-medium">IIT Kharagpur</p>
@@ -72,13 +75,6 @@ const About = () => {
               <p className="text-sm text-muted-foreground">Sacred Heart School, Rayagada</p>
             </div>
             <div>
-              <h3 className="font-display text-sm font-bold uppercase tracking-wider text-foreground mb-4">Skills</h3>
-              <p className="text-sm text-muted-foreground transition-all duration-300 hover:text-primary cursor-default">General Management</p>
-              <p className="text-sm text-muted-foreground transition-all duration-300 hover:text-primary cursor-default">Canva & Figma</p>
-              <p className="text-sm text-muted-foreground transition-all duration-300 hover:text-primary cursor-default">Python, SQL</p>
-              <p className="text-sm text-muted-foreground transition-all duration-300 hover:text-primary cursor-default">Notion</p>
-              <p className="text-sm text-muted-foreground transition-all duration-300 hover:text-primary cursor-default">Tableau & BI</p>
-            </div>            <div>
               <h3 className="font-display text-sm font-bold uppercase tracking-wider text-foreground mb-4 italic">get in touch</h3>
               <h4 className="font-display text-lg font-bold text-foreground mb-6 leading-tight">Let's build<br />something.</h4>
               
@@ -96,7 +92,7 @@ const About = () => {
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors group text-sm"
                 >
-                  <Linkedin size={18} strokeWidth={1.5} />
+                  <Mail size={18} strokeWidth={1.5} />
                   <span className="group-hover:underline underline-offset-4">LinkedIn</span>
                 </a>
                 <a
@@ -105,7 +101,7 @@ const About = () => {
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors group text-sm"
                 >
-                  <Github size={18} strokeWidth={1.5} />
+                  <Mail size={18} strokeWidth={1.5} />
                   <span className="group-hover:underline underline-offset-4">GitHub</span>
                 </a>
               </div>
